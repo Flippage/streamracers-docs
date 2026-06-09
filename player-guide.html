@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stream Racers | Player Guide</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="hero">
+        <h1 class="title">PLAYER GUIDE</h1>
+        <p class="subtitle">Welcome to the race! Learn how to join, get rich, and ruin other racers' days.</p>
+    </div>
+
+    <nav>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="broadcaster-guide.html" class="nav-link magenta">Broadcaster Guide</a>
+    </nav>
+
+    <div class="container">
+        <div class="glass-panel text-center mb-8">
+            <h2 class="orbitron" style="color: var(--neon-cyan); margin-bottom: 1rem;">Click any command to copy it!</h2>
+        </div>
+        
+        <div id="commands-container"></div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Render player-facing sections
+        renderCommands('commands-container', [
+            'BASICS', 
+            'TEAMS', 
+            'ECONOMY', 
+            'ITEMS', 
+            'DEX', 
+            'CUSTOMIZATION', 
+            'GALLERY', 
+            'PARTY'
+        ]);
+    </script>
+</body>
+</html>

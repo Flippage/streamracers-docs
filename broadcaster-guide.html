@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stream Racers | Broadcaster Guide</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="hero">
+        <h1 class="title">BROADCASTER GUIDE</h1>
+        <p class="subtitle">Take control of the track. Setup instructions, game modes, and moderation commands.</p>
+    </div>
+
+    <nav>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="player-guide.html" class="nav-link">Player Guide</a>
+    </nav>
+
+    <div class="container">
+        
+        <div class="glass-panel mb-8">
+            <h2 class="category-title text-magenta">⚙️ GETTING STARTED</h2>
+            <div class="cmd-desc">
+                <p class="mb-4">1. Open the game and click <strong>SETTINGS</strong> in the main menu.</p>
+                <p class="mb-4">2. Enter your Twitch Username and hit Save.</p>
+                <p class="mb-4">3. Click the red <strong>OFFLINE</strong> pill in the top right corner of the main menu to connect to your Twitch Chat.</p>
+                <p class="mb-4">Once connected, it will turn green, and players can immediately begin typing <span class="cmd-example">!join</span> in your chat to enter the lobby!</p>
+            </div>
+        </div>
+
+        <div id="commands-container"></div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Render broadcaster-facing sections
+        renderCommands('commands-container', ['MODERATOR', 'BROADCASTER']);
+    </script>
+</body>
+</html>
