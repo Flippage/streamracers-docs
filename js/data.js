@@ -620,12 +620,21 @@ const COMMANDS_DATA = [
         "color": "text-pink-300",
         "items": [
             {
+                "isSubHeader": true,
+                "title": "COMMON TRAILS",
+                "cmd": "",
+                "desc": "",
+                "example": "",
+                "aliases": []
+            },
+            {
                 "cmd": "Smoke",
                 "aliases": [
                     "COMMON"
                 ],
                 "desc": "Style: ribbon. Cost: 20c Box",
-                "example": "!settrail smoke"
+                "example": "!settrail smoke",
+                "image": "assets/trails/smoke.gif"
             },
             {
                 "cmd": "Earth",
@@ -633,7 +642,8 @@ const COMMANDS_DATA = [
                     "COMMON"
                 ],
                 "desc": "Style: ribbon. Cost: 20c Box",
-                "example": "!settrail earth"
+                "example": "!settrail earth",
+                "image": "assets/trails/earth.gif"
             },
             {
                 "cmd": "Water",
@@ -641,7 +651,8 @@ const COMMANDS_DATA = [
                     "COMMON"
                 ],
                 "desc": "Style: ribbon. Cost: 20c Box",
-                "example": "!settrail water"
+                "example": "!settrail water",
+                "image": "assets/trails/water.gif"
             },
             {
                 "cmd": "Love",
@@ -649,7 +660,8 @@ const COMMANDS_DATA = [
                     "COMMON"
                 ],
                 "desc": "Style: ribbon. Cost: 20c Box",
-                "example": "!settrail love"
+                "example": "!settrail love",
+                "image": "assets/trails/love.gif"
             },
             {
                 "cmd": "Tech",
@@ -657,7 +669,8 @@ const COMMANDS_DATA = [
                     "COMMON"
                 ],
                 "desc": "Style: ribbon. Cost: 20c Box",
-                "example": "!settrail tech"
+                "example": "!settrail tech",
+                "image": "assets/trails/tech.gif"
             },
             {
                 "cmd": "Bubblegum",
@@ -665,7 +678,16 @@ const COMMANDS_DATA = [
                     "COMMON"
                 ],
                 "desc": "Style: ribbon. Cost: 20c Box",
-                "example": "!settrail bubble"
+                "example": "!settrail bubble",
+                "image": "assets/trails/bubble.gif"
+            },
+            {
+                "isSubHeader": true,
+                "title": "RARE TRAILS",
+                "cmd": "",
+                "desc": "",
+                "example": "",
+                "aliases": []
             },
             {
                 "cmd": "Toxic",
@@ -673,7 +695,8 @@ const COMMANDS_DATA = [
                     "RARE"
                 ],
                 "desc": "Style: ribbon. Cost: 44c Box",
-                "example": "!settrail toxic"
+                "example": "!settrail toxic",
+                "image": "assets/trails/toxic.gif"
             },
             {
                 "cmd": "Oceanic",
@@ -681,7 +704,8 @@ const COMMANDS_DATA = [
                     "RARE"
                 ],
                 "desc": "Style: ribbon. Cost: 44c Box",
-                "example": "!settrail oceanic"
+                "example": "!settrail oceanic",
+                "image": "assets/trails/oceanic.gif"
             },
             {
                 "cmd": "Plasma",
@@ -689,7 +713,8 @@ const COMMANDS_DATA = [
                     "RARE"
                 ],
                 "desc": "Style: ribbon. Cost: 44c Box",
-                "example": "!settrail plasma"
+                "example": "!settrail plasma",
+                "image": "assets/trails/plasma.gif"
             },
             {
                 "cmd": "Hot Rod",
@@ -697,7 +722,8 @@ const COMMANDS_DATA = [
                     "RARE"
                 ],
                 "desc": "Style: ribbon. Cost: 44c Box",
-                "example": "!settrail hotrod"
+                "example": "!settrail hotrod",
+                "image": "assets/trails/hotrod.gif"
             },
             {
                 "cmd": "Royalty",
@@ -705,7 +731,8 @@ const COMMANDS_DATA = [
                     "RARE"
                 ],
                 "desc": "Style: ribbon. Cost: 44c Box",
-                "example": "!settrail royalty"
+                "example": "!settrail royalty",
+                "image": "assets/trails/royalty.gif"
             },
             {
                 "cmd": "High Voltage",
@@ -713,7 +740,16 @@ const COMMANDS_DATA = [
                     "RARE"
                 ],
                 "desc": "Style: ribbon. Cost: 44c Box",
-                "example": "!settrail voltage"
+                "example": "!settrail voltage",
+                "image": "assets/trails/voltage.gif"
+            },
+            {
+                "isSubHeader": true,
+                "title": "EPIC TRAILS",
+                "cmd": "",
+                "desc": "",
+                "example": "",
+                "aliases": []
             },
             {
                 "cmd": "Permafrost",
@@ -721,7 +757,8 @@ const COMMANDS_DATA = [
                     "EPIC"
                 ],
                 "desc": "Style: ribbon. Cost: 70c Box",
-                "example": "!settrail frost"
+                "example": "!settrail frost",
+                "image": "assets/trails/frost.gif"
             },
             {
                 "cmd": "Sunset Drive",
@@ -729,7 +766,8 @@ const COMMANDS_DATA = [
                     "EPIC"
                 ],
                 "desc": "Style: ribbon. Cost: 70c Box",
-                "example": "!settrail sunset"
+                "example": "!settrail sunset",
+                "image": "assets/trails/sunset.gif"
             },
             {
                 "cmd": "Emerald City",
@@ -737,7 +775,8 @@ const COMMANDS_DATA = [
                     "EPIC"
                 ],
                 "desc": "Style: ribbon. Cost: 70c Box",
-                "example": "!settrail emerald"
+                "example": "!settrail emerald",
+                "image": "assets/trails/emerald.gif"
             },
             {
                 "cmd": "The Void",
@@ -745,7 +784,8 @@ const COMMANDS_DATA = [
                     "EPIC"
                 ],
                 "desc": "Style: ribbon. Cost: 70c Box",
-                "example": "!settrail void"
+                "example": "!settrail void",
+                "image": "assets/trails/void.gif"
             },
             {
                 "cmd": "Crimson Guard",
@@ -753,7 +793,16 @@ const COMMANDS_DATA = [
                     "EPIC"
                 ],
                 "desc": "Style: ribbon. Cost: 70c Box",
-                "example": "!settrail crimson"
+                "example": "!settrail crimson",
+                "image": "assets/trails/crimson.gif"
+            },
+            {
+                "isSubHeader": true,
+                "title": "LEGENDARY TRAILS",
+                "cmd": "",
+                "desc": "",
+                "example": "",
+                "aliases": []
             },
             {
                 "cmd": "Absolute Zero",
@@ -761,7 +810,8 @@ const COMMANDS_DATA = [
                     "LEGENDARY"
                 ],
                 "desc": "Style: ribbon. Cost: 150c Box",
-                "example": "!settrail absolute_zero"
+                "example": "!settrail absolute_zero",
+                "image": "assets/trails/absolute_zero.gif"
             },
             {
                 "cmd": "Inferno",
@@ -769,7 +819,8 @@ const COMMANDS_DATA = [
                     "LEGENDARY"
                 ],
                 "desc": "Style: ribbon. Cost: 150c Box",
-                "example": "!settrail inferno"
+                "example": "!settrail inferno",
+                "image": "assets/trails/inferno.gif"
             },
             {
                 "cmd": "The Matrix",
@@ -777,7 +828,8 @@ const COMMANDS_DATA = [
                     "LEGENDARY"
                 ],
                 "desc": "Style: ribbon. Cost: 150c Box",
-                "example": "!settrail matrix"
+                "example": "!settrail matrix",
+                "image": "assets/trails/matrix.gif"
             },
             {
                 "cmd": "Rainbow Road",
@@ -785,7 +837,8 @@ const COMMANDS_DATA = [
                     "LEGENDARY"
                 ],
                 "desc": "Style: ribbon. Cost: 150c Box",
-                "example": "!settrail rainbow"
+                "example": "!settrail rainbow",
+                "image": "assets/trails/rainbow.gif"
             },
             {
                 "cmd": "Nebula",
@@ -793,7 +846,8 @@ const COMMANDS_DATA = [
                     "LEGENDARY"
                 ],
                 "desc": "Style: ribbon. Cost: 150c Box",
-                "example": "!settrail nebula"
+                "example": "!settrail nebula",
+                "image": "assets/trails/nebula.gif"
             },
             {
                 "cmd": "Neon Blue",
@@ -801,7 +855,8 @@ const COMMANDS_DATA = [
                     "LEGENDARY"
                 ],
                 "desc": "Style: ribbon. Cost: 150c Box",
-                "example": "!settrail neon"
+                "example": "!settrail neon",
+                "image": "assets/trails/neon.gif"
             },
             {
                 "cmd": "Quantum Realm",
@@ -809,7 +864,8 @@ const COMMANDS_DATA = [
                     "LEGENDARY"
                 ],
                 "desc": "Style: ribbon. Cost: 150c Box",
-                "example": "!settrail quantum"
+                "example": "!settrail quantum",
+                "image": "assets/trails/quantum.gif"
             },
             {
                 "cmd": "Redacted",
@@ -817,23 +873,16 @@ const COMMANDS_DATA = [
                     "LEGENDARY"
                 ],
                 "desc": "Style: ribbon. Cost: 150c Box",
-                "example": "!settrail redacted"
+                "example": "!settrail redacted",
+                "image": "assets/trails/redacted.gif"
             },
             {
-                "cmd": "High Roller",
-                "aliases": [
-                    "SPECIAL"
-                ],
-                "desc": "Style: novelty. Cost: Event/Special",
-                "example": "!settrail money"
-            },
-            {
-                "cmd": "ALPHA GLITCH",
-                "aliases": [
-                    "SPECIAL"
-                ],
-                "desc": "Style: ribbon. Cost: Event/Special",
-                "example": "!settrail glitch"
+                "isSubHeader": true,
+                "title": "NOVELTY TRAILS",
+                "cmd": "",
+                "desc": "",
+                "example": "",
+                "aliases": []
             },
             {
                 "cmd": "Music Notes",
@@ -841,7 +890,8 @@ const COMMANDS_DATA = [
                     "NOVELTY"
                 ],
                 "desc": "Style: novelty. Cost: 100c Direct",
-                "example": "!buy trail notes"
+                "example": "!buy trail notes",
+                "image": "assets/trails/notes.gif"
             },
             {
                 "cmd": "Poop",
@@ -849,7 +899,8 @@ const COMMANDS_DATA = [
                     "NOVELTY"
                 ],
                 "desc": "Style: novelty. Cost: 100c Direct",
-                "example": "!buy trail poop"
+                "example": "!buy trail poop",
+                "image": "assets/trails/poop.gif"
             },
             {
                 "cmd": "Soap Bubbles",
@@ -857,7 +908,8 @@ const COMMANDS_DATA = [
                     "NOVELTY"
                 ],
                 "desc": "Style: novelty. Cost: 100c Direct",
-                "example": "!buy trail real_bubbles"
+                "example": "!buy trail real_bubbles",
+                "image": "assets/trails/real_bubbles.gif"
             },
             {
                 "cmd": "Paw Prints",
@@ -865,7 +917,8 @@ const COMMANDS_DATA = [
                     "NOVELTY"
                 ],
                 "desc": "Style: novelty. Cost: 100c Direct",
-                "example": "!buy trail paws"
+                "example": "!buy trail paws",
+                "image": "assets/trails/paws.gif"
             },
             {
                 "cmd": "Cum",
@@ -873,7 +926,8 @@ const COMMANDS_DATA = [
                     "NOVELTY"
                 ],
                 "desc": "Style: novelty. Cost: 100c Direct",
-                "example": "!buy trail cum"
+                "example": "!buy trail cum",
+                "image": "assets/trails/cum.gif"
             },
             {
                 "cmd": "Train Tracks",
@@ -881,7 +935,8 @@ const COMMANDS_DATA = [
                     "NOVELTY"
                 ],
                 "desc": "Style: ribbon. Cost: 100c Direct",
-                "example": "!buy trail tracks"
+                "example": "!buy trail tracks",
+                "image": "assets/trails/tracks.gif"
             },
             {
                 "cmd": "The Entity",
@@ -889,7 +944,8 @@ const COMMANDS_DATA = [
                     "NOVELTY"
                 ],
                 "desc": "Style: novelty. Cost: 100c Direct",
-                "example": "!buy trail scratch_marks"
+                "example": "!buy trail scratch_marks",
+                "image": "assets/trails/scratch_marks.gif"
             },
             {
                 "cmd": "Barbed Wire",
@@ -897,7 +953,8 @@ const COMMANDS_DATA = [
                     "NOVELTY"
                 ],
                 "desc": "Style: novelty. Cost: 100c Direct",
-                "example": "!buy trail barbed_wire"
+                "example": "!buy trail barbed_wire",
+                "image": "assets/trails/barbed_wire.gif"
             },
             {
                 "cmd": "Blood Trail",
@@ -905,7 +962,34 @@ const COMMANDS_DATA = [
                     "NOVELTY"
                 ],
                 "desc": "Style: novelty. Cost: 100c Direct",
-                "example": "!buy trail blood"
+                "example": "!buy trail blood",
+                "image": "assets/trails/blood.gif"
+            },
+            {
+                "isSubHeader": true,
+                "title": "SPECIAL TRAILS",
+                "cmd": "",
+                "desc": "",
+                "example": "",
+                "aliases": []
+            },
+            {
+                "cmd": "High Roller",
+                "aliases": [
+                    "SPECIAL"
+                ],
+                "desc": "Style: novelty. Cost: Event/Special",
+                "example": "!settrail money",
+                "image": "assets/trails/money.gif"
+            },
+            {
+                "cmd": "ALPHA GLITCH",
+                "aliases": [
+                    "SPECIAL"
+                ],
+                "desc": "Style: ribbon. Cost: Event/Special",
+                "example": "!settrail glitch",
+                "image": "assets/trails/glitch.gif"
             }
         ]
     },

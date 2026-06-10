@@ -10,7 +10,7 @@ function extractBlock(start, stop) {
 
 const itemsCode = extractBlock('const ITEMS = {', 'const ITEM_ALIASES');
 const trailsCode = extractBlock('const TRAILS = {', 'CONFIG.partyModeEnabled');
-const partyCode = extractBlock('const PARTY_ITEMS = [', '// --- STATUS ICONS ---');
+const partyCode = extractBlock('const PARTY_ITEMS = [', 'const WHEEL_PRIZES = [');
 const teamsCode = extractBlock('const TEAMS = [', 'class Game {');
 
 // The getHelpData function contains the static array
@@ -39,6 +39,8 @@ if (helpStart !== -1) {
 
 // Now we build a standalone script that evaluates these variables and runs the getHelpData logic
 const script = `
+const fs = require('fs');
+
 ${itemsCode}
 ${trailsCode}
 ${partyCode}
@@ -82,7 +84,7 @@ function generateFullData() {
         return (rarityOrder[rA] || 9) - (rarityOrder[rB] || 9);
     });
 
-    const trailList = [];
+    let trailList = [];
     Object.entries(TRAILS).forEach(([key, t]) => {
         if (key === 'default') return;
         let cost = "Box";
@@ -94,19 +96,57 @@ function generateFullData() {
         else if (r === 'novelty') cost = "100c Direct";
         else if (r === 'special') cost = "Event/Special";
 
-        trailList.push({
+        const imgPath = 'assets/trails/' + key + '.gif';
+        const obj = {
             cmd: t.name,
             aliases: [r.toUpperCase()],
             desc: \`Style: \${t.type || 'Standard'}. Cost: \${cost}\`,
             example: r === 'novelty' ? \`!buy trail \${key}\` : \`!settrail \${key}\`
-        });
+        };
+        if (fs.existsSync('c:/Users/flipp/Downloads/StreamRacers-Docs/' + imgPath)) {
+            obj.image = imgPath;
+        }
+        trailList.push(obj);
     });
 
-    trailList.sort((a, b) => {
-        const rA = a.aliases[0] ? a.aliases[0].toLowerCase() : 'common';
-        const rB = b.aliases[0] ? b.aliases[0].toLowerCase() : 'common';
-        return (rarityOrder[rA] || 9) - (rarityOrder[rB] || 9);
+    const order = ['COMMON', 'RARE', 'EPIC', 'LEGENDARY', 'NOVELTY', 'SPECIAL'];
+    const grouped = {};
+    order.forEach(r => grouped[r] = []);
+    
+    trailList.forEach(t => {
+        let rarity = t.aliases && t.aliases.length > 0 ? t.aliases[0] : 'COMMON';
+        if (!grouped[rarity]) grouped[rarity] = [];
+        grouped[rarity].push(t);
     });
+    
+    const newTrailList = [];
+    order.forEach(r => {
+        if (grouped[r] && grouped[r].length > 0) {
+            newTrailList.push({
+                isSubHeader: true,
+                title: r + ' TRAILS',
+                cmd: '',
+                desc: '',
+                example: '',
+                aliases: []
+            });
+            newTrailList.push(...grouped[r]);
+        }
+    });
+    Object.keys(grouped).forEach(r => {
+        if (!order.includes(r) && grouped[r].length > 0) {
+            newTrailList.push({
+                isSubHeader: true,
+                title: r + ' TRAILS',
+                cmd: '',
+                desc: '',
+                example: '',
+                aliases: []
+            });
+            newTrailList.push(...grouped[r]);
+        }
+    });
+    trailList = newTrailList;
 
     const partyList = [];
     PARTY_ITEMS.forEach(p => {

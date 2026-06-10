@@ -77,7 +77,12 @@ function renderCommands(containerId, allowedCategories = []) {
             html += `<div class="commands-grid">`;
 
             filteredItems.forEach(cmd => {
+                if (cmd.isSubHeader) {
+                    html += `<div class="sub-category-title" style="grid-column: 1 / -1; margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1.25rem; color: #fff; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem; width: 100%;">${cmd.title}</div>`;
+                    return;
+                }
                 html += `<div class="command-card" onclick="navigator.clipboard.writeText('${cmd.example}')" title="Click to copy example!">
+                    ${cmd.image ? `<div class="cmd-image" style="text-align: center; margin-bottom: 1rem;"><img src="${cmd.image}" alt="${cmd.cmd}" onerror="this.style.display='none'" style="max-width: 100%; max-height: 80px; border-radius: 8px;"/></div>` : ''}
                     <div class="cmd-title">${formatSyntax(cmd.cmd)}</div>
                     ${cmd.aliases && cmd.aliases.length > 0 ? `<div class="cmd-aliases"><strong>Aliases:</strong> ${cmd.aliases.join(', ')}</div>` : ''}
                     <div class="cmd-desc">${cmd.desc}</div>

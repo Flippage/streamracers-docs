@@ -2,7 +2,6 @@
 const document = { getElementById: () => ({ addEventListener: () => {} }) };
 const window = { require: require };
 
-
 // --- ELECTRON MODULES ---
 const fs = window.require('fs');
 const path = window.require('path');
@@ -2773,7 +2772,7 @@ class TwitchManager {
                 if (['RACING', 'BETTING', 'COUNTDOWN'].includes(this.game.state)) {
                     this.say(this.channel, `🎡 You cannot open the wheel while a race is active or starting!`);
                 } else {
-                    document.getElementById('chanceWheelModal').classList.remove('hidden');
+                    window.safeViewTransition(() => document.getElementById('chanceWheelModal').classList.remove('hidden'));
                 }
             }
             if (['!closewheel', '!hidewheel'].includes(command)) {
@@ -3730,7 +3729,7 @@ class Player {
                     !other.finished &&
                     !(game.isRelayRace && other.relayWaiting) &&
                     other.x < this.x
-                  )
+                )
                 : (rank < totalPlayers); // fallback if game ref unavailable
             if (rank >= totalPlayers || !hasActiveBehind) {
                 pool = pool.filter(i => i.type !== 'trap_behind');
@@ -4265,7 +4264,8 @@ Object.entries(TRAILS).forEach(([key, t]) => {
         cmd: t.name,
         aliases: [r.toUpperCase()],
         desc: 'Style: ' + (t.type || 'Standard') + '. Cost: ' + cost,
-        example: r === 'novelty' ? '!buy trail ' + key : '!settrail ' + key
+        example: r === 'novelty' ? '!buy trail ' + key : '!settrail ' + key,
+        image: 'assets/trails/' + key + '.gif'
     });
 });
 
@@ -4281,7 +4281,8 @@ PARTY_ITEMS.forEach(p => {
         cmd: p.icon + ' ' + p.name,
         aliases: [p.type.toUpperCase().replace('_', ' ')],
         desc: p.desc,
-        example: '(Random Drop)'
+        example: '(Random Drop)',
+        image: 'assets/party/' + p.id.toLowerCase() + '.gif'
     });
 });
 
@@ -4299,5 +4300,3 @@ TEAMS.forEach(t => {
 const output = { itemList, trailList, partyList, teamList };
 fs.writeFileSync('C:/Users/flipp/Downloads/StreamRacers-Docs/js/extracted.json', JSON.stringify(output, null, 2));
 console.log("Done extracting JSON arrays.");
-
-
